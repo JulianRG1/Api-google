@@ -9,6 +9,7 @@ import * as url from 'url';
 import Routes from "./routes/backoffice.routes.js";
 import Route from "./routes/home.routes.js";
 import dash from "./routes/dashboard.routes.js";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -18,6 +19,7 @@ dotenv.config();
 //MIDDLEWARES
 app.use(express.json());
 app.use(passport.initialize());
+app.use(cookieParser());
 
 app.use("/auth",passport.authenticate('auth-google',{
     scope:["https://www.googleapis.com/auth/userinfo.email",
