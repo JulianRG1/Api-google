@@ -13,8 +13,10 @@ dash.get('/inicio', (req, res)=>{
             try {
                 const token = jwt.verify(req.cookies.ckjs, process.env.SECRET_KEY);
 
-                res.render("dash", {"nombre": token.nombre,
-                                    "foto": token.foto
+                res.render("dash", {
+                                    "nombre": token.nombre,
+                                    "foto": token.foto,
+                                    "menu": 0
                                     });
 
             } catch (error) {
@@ -22,7 +24,7 @@ dash.get('/inicio', (req, res)=>{
                 res.redirect("/")
 
             }
-
+                res.render('dash')
         }else{
         res.redirect("/");
         }
@@ -31,8 +33,36 @@ dash.get('/inicio', (req, res)=>{
 /* console.log('Logueo Exitoso'); */
 });
 
+dash.get('/usuario', (req,res)=>{
+
+    if (req.cookies.ckjs) {
+            
+
+        try {
+            const token = jwt.verify(req.cookies.ckjs, process.env.SECRET_KEY);
+
+            res.render("dash", {
+                                "nombre": token.nombre,
+                                "foto": token.foto,
+                                "menu": 1
+                                });
+
+        } catch (error) {
+
+            res.redirect("/")
+
+        }
+            res.render('dash')
+    }else{
+    res.redirect("/");
+    } 
+});
+
+
 dash.get('/salir', (req,res)=>{
     res.clearCookie("ckjs");
     res.redirect('/');
-})
+});
+
+
 export default dash;

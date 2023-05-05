@@ -42,7 +42,7 @@ app.set("views", path.join(__dirname, "views"));
 app.use('/', Routes);
 app.use('/',Route);
 app.use('/service',Route);
-app.use('/dashboard',dash);
+app.use('/v1',dash);
 
 app.use(express.static(__dirname + '../public'));
 
