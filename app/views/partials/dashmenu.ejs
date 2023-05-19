@@ -1,115 +1,72 @@
 <header class="main-header">
-    <!-- Logo -->
-    <a href="../v1/inicio" class="logo">
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>J</b>Soft</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Julio</b>Soft</span>
+  <!-- Logo -->
+  <a href="../v1/inicio" class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini"><b><em>JSoft</em></b></span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg"><b>Julio</b>Soft</span>
+  </a>
+  <!-- Header Navbar: style can be found in header.less -->
+  <nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
     </a>
-    <!-- Header Navbar: style can be found in header.less -->
-    <nav class="navbar navbar-static-top">
-      <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </a>
 
-      <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">
+    <div class="navbar-custom-menu">
+      <ul class="nav navbar-nav">
 
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src=<%= foto %> class="user-image" alt="User Image">
-              <span class="hidden-xs"><%= nombre %></span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="/adminlte/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                    <%= nombre %>- Web Developer
-                  <small>Member since Nov. 2020</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
-                </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="../v1/salir" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="../v1/salir"><i class="fa fa-sign-out"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- =============================================== -->
-
-  <!-- Left side column. contains the sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-
-
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">Menu</li>
-        <li class="treeview">
-        </li>
-
-       <li class="treeview">
-          <a href="../v1/usuario">
-            <i class="fa fa-user"></i> <span>Usuario</span>
+        <!-- User Account: style can be found in dropdown.less -->
+        <li class="dropdown user user-menu">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            <img src=<%= foto %> class="user-image" alt="User Image">
+            <span class="hidden-xs"><%= nombre %></span>
           </a>
+
         </li>
-
-
+        <!-- Control Sidebar Toggle Button -->
         <li>
-          <a href="../v1/productos">
-            <i class="fa fa-envelope"></i> <span>Prodcutos</span>
-          </a>
+          <a href="../v1/salir"><i class="fa fa-sign-out"></i></a>
         </li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
-        <li>
-          <a href="../v1/categoria">
-            <i class="fa fa-align-left"></i> <span>Categoria</span>
-          </a>
-        </li>
+<!-- =============================================== -->
 
-        <li>
-          <a href="../v1/salir">
-            <i class="fa fa-sign-out"></i> <span>salir</span>
-          </a>
-        </li>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+<!-- Left side column. contains the sidebar -->
+<aside class="main-sidebar">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+
+
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="header">MENU</li>
+      <li>
+        <a href="../v1/usuario">
+          <i class="fa fa-users"></i> <span>USUARIOS</span>
+        </a>
+      </li>
+      <li>
+        <a href=".../v1/producto">
+          <i class="fa fa-cart-arrow-down"></i> <span>PRODUCTOS</span>
+        </a>
+      </li>
+      <li>
+        <a href="../v1/categoria">
+          <i class="fa fa-sitemap"></i> <span>CATEGORIAS</span>
+        </a>
+      </li>
+      <li>
+        <a href="../v1/salir">
+          <i class="fa fa-sign-out"></i> <span>SALIR</span>
+        </a>
+      </li>
+  </section>
+  <!-- /.sidebar -->
+</aside>

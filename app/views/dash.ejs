@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <%- include('./partials/dashhead.ejs'); %>
+<%- include('./partials/dashhead.ejs') %>
 <body class="hold-transition skin-blue sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
-  <%- include('./partials/dashmenu.ejs'); %>
+<%- include('./partials/dashmenu.ejs') %>
 
-  <!-- =============================================== -->
-  <% if (menu ==0) { %>
-  <%-include('./partials/dash-inicio.ejs'); %>
+
+
+<% if (menu==0){ %>
+  <%- include('./partials/dashinicio.ejs') %>
+<% } %>
+<% if (menu==1){ %>
+  <%- include('./partials/dashuser.ejs') %>
 <% } %>
 
-<% if(menu ==1) { %>
-  <%-include('./partials/dash-user.ejs'); %>
-<% } %>
 
+  <%- include('./partials/dashfooter.ejs') %>
 
-  <!-- /.content-wrapper -->
-
-<%-include('./partials/dashfooter.ejs'); %>
-
-
-<!-- ./wrapper -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- /wrapper -->
 
 <!-- jQuery 3 -->
 <script src="../v1/bower_components/jquery/dist/jquery.min.js"></script>

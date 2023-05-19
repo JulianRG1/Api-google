@@ -11,6 +11,8 @@ import Route from "./routes/home.routes.js";
 import dash from "./routes/dashboard.routes.js";
 import cookieParser from "cookie-parser";
 import bodyParser from "body-parser";
+
+
 const app = express();
 
 //SETTINGS
