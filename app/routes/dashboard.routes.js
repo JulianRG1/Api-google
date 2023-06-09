@@ -22,7 +22,7 @@ dash.get('/inicio', (req, res)=>{
 
             } catch (error) {
 
-                res.redirect("/")
+                res.redirect("/");
 
             }
                 res.render('dash')
